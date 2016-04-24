@@ -1,0 +1,17 @@
+<meta charset="ufs-8">
+<script>
+var n=0;
+do{
+	if (prompt("Сыграем, глупец? да?") != "да" ) {
+		break;
+	}
+	if ((Math.random() * 6) < 1) {
+		alert("Тебе конец");
+		break;
+	}
+	alert("Счастливчик!");
+	n++;
+}while (true);
+
+alert("Сыргано " + n + " раундов");
+</script>

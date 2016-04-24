@@ -1,0 +1,18 @@
+<meta charset="ufs-8">
+<script>
+	var beg1 = 20;
+	var end1 = 25;
+	var beg2 = 40;
+	var end2 = 47;
+	var a = parseInt(prompt("Введите угол в диапазоне от 0 до 90"));
+	if (isNaN(a)) {
+		alert("надо было ввести число");
+	} else if ( a < 0 || a > 90) {
+		alert("Угол " + a + " вне допустимого диапазона");
+	} else if ( (a >= beg1 && a <= end1 ) || (a >= beg2 && a <= end2 ) ){
+		alert("Попал!!");
+	} else {
+		alert("Промах :( ");
+	}
+
+</script>

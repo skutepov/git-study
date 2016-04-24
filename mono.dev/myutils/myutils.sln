@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myutils", "myutils\myutils.csproj", "{AF962097-40D5-4BC2-8261-815B68191DED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF962097-40D5-4BC2-8261-815B68191DED}.Debug|x86.ActiveCfg = Debug|x86
+		{AF962097-40D5-4BC2-8261-815B68191DED}.Debug|x86.Build.0 = Debug|x86
+		{AF962097-40D5-4BC2-8261-815B68191DED}.Release|x86.ActiveCfg = Release|x86
+		{AF962097-40D5-4BC2-8261-815B68191DED}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = myutils\myutils.csproj
+	EndGlobalSection
+EndGlobal

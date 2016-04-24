@@ -1,0 +1,51 @@
+<meta carset='utf-8'>
+<script type="text/javascript">
+	var arr = [];
+	var rounds = 0;
+	var n_zeros=0, n_blacks=0, n_reds=0;
+	var max_zeros=0, max_blacks=0, max_reds=0;
+	var i=0, x=0;
+	var black = -1, zero = 0, red = 1;
+	;
+	while ( ((rounds=parseInt(prompt("Введите количество раундов: "))) <= 0 ) || isNaN(rounds)) {
+ 	alert("Количество раундов должно быть больше нуля! Задай большое число! Например: 100000 ");
+ }
+	for(i=1; i<=rounds; i++){
+		x=Math.round(Math.random()*36);
+		if (x!=zero) {
+		x=x%2;  
+			if (x==0){
+				x=black;
+			}else {
+				x=red;
+			}
+		}
+		arr.push(x);
+	}
+	for(i=0;i<arr.length; i++){  
+		if (arr[i]==red){
+			n_reds++; // встретили красный
+			if ( ( (i+1) == arr.length) || (arr[i]!=arr[i+1]) ) { //это последний элемент последовательности?
+				if (n_reds>max_reds) max_reds=n_reds; // эта была самая длинная последовательность?
+				n_reds=0; // в следующий раз начнем с начала
+				}
+		} else if (arr[i]==black) {
+			n_blacks++;
+			if  ( ( (i+1) == arr.length) || (arr[i]!=arr[i+1]) ) {
+				if (n_blacks>max_blacks) max_blacks=n_blacks;
+				n_blacks=0;
+			}
+		} else if (arr[i]==zero){
+			n_zeros++;
+			if  ( ( (i+1) == arr.length) || (arr[i]!=arr[i+1]) )  {
+				if (n_zeros>max_zeros) max_zeros=n_zeros;
+				n_zeros=0;
+			}
+		}
+	}
+	alert("максимальная длинна красной последовательности: " + max_reds);
+	alert("максимальная длинна черной последовательности: " + max_blacks);
+	alert("максимальная длинна последовательности нулей: " + max_zeros);
+	
+</script>
+

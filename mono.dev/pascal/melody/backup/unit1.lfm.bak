@@ -1,0 +1,52 @@
+object fMain: TfMain
+  Left = 320
+  Height = 300
+  Top = 124
+  Width = 400
+  BorderStyle = bsSingle
+  Caption = 'Угадай мелодию!'
+  ClientHeight = 300
+  ClientWidth = 400
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnPaint = FormPaint
+  LCLVersion = '1.0.10.0'
+  object btnPlay: TButton
+    Left = 76
+    Height = 58
+    Top = 32
+    Width = 244
+    Caption = 'Играть'
+    Font.Height = -27
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btnSetings: TButton
+    Left = 76
+    Height = 58
+    Top = 112
+    Width = 244
+    Caption = 'Настройки'
+    Font.Height = -27
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    OnClick = btnSetingsClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnExit: TButton
+    Left = 76
+    Height = 58
+    Top = 192
+    Width = 244
+    Caption = 'Выход'
+    Font.Height = -27
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    OnClick = btnExitClick
+    ParentFont = False
+    TabOrder = 2
+  end
+end

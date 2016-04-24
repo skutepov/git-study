@@ -1,0 +1,21 @@
+<meta charset="ufs-8">
+<script>
+var sum, pct, years, y;
+ while ( ((sum=parseInt(prompt("Введите сумму вклада"))) < 0 ) || isNaN(sum) ) {
+ 	alert("Сумма вклада не может быть меньше нуля!");
+ }
+
+ while ( ((pct=parseInt(prompt("Введите годовой процент"))) < 0 ) || isNaN(pct)) {
+ 	alert("Процент не может быть меньше нуля!");
+ }
+
+ while ( ((years=parseInt(prompt("На солько лет вклад"))) < 0 ) || isNaN(years)){
+ 	alert("Срок вклада не может быть меньше нуля");
+ }
+ alert(sum + pct + years);
+ for (y=1 ; y <= years ; y++){
+ 	sum = sum + (sum  * pct)/100;
+ 	alert("Cумма вклада за " + y + "-й год = "+ sum );
+ }
+
+</script>

@@ -1,0 +1,75 @@
+<meta charset="ufs-8">
+<html>
+<body>
+Карты диллера: <br>
+<img id='ds1' />
+<img id='ds2' />
+<img id='ds3' />
+<img id='ds4' />
+<img id='ds5' />
+<br><hr>
+Карты игрока: <br>
+<img id='ps1' />
+<img id='ps2' />
+<img id='ps3' />
+<img id='ps4' />
+<img id='ps5' />
+
+<script>
+/*var cards_img=[ 
+	'files/6.gif',
+	'files/7.gif',
+	'files/8.gif',
+	'files/9.gif',
+	'files/10.gif',
+	'files/11.gif',
+	'files/12.gif',
+	'files/13.gif',
+	'files/1.gif'
+];*/
+//сделаю пример рабочим без копирования карт из инета 
+var cards_img=[ 
+	'http://lc.kdy71.com/images/cards/6.gif',
+	'http://lc.kdy71.com/images/cards/7.gif',
+	'http://lc.kdy71.com/images/cards/8.gif',
+	'http://lc.kdy71.com/images/cards/9.gif',
+	'http://lc.kdy71.com/images/cards/10.gif',
+	'http://lc.kdy71.com/images/cards/11.gif',
+	'http://lc.kdy71.com/images/cards/12.gif',
+	'http://lc.kdy71.com/images/cards/13.gif',
+	'http://lc.kdy71.com/images/cards/1.gif'
+];
+
+
+var dealer_slot=[
+	'ds1',
+	'ds2',
+	'ds3',
+	'ds4',
+	'ds5'
+];
+var player_slot=[
+	'ps1',
+	'ps2',
+	'ps3',
+	'ps4',
+	'ps5'
+];
+
+function printCards(slot,card){
+	var i;
+	for (i=0; (i<card.length) && (i<slot.length) ; i++) {
+	document.getElementById(slot[i]).src=cards_img[card[i]];	
+
+	}
+}
+
+var dealer = [1,3,6,7];
+var player = [0,5,3]
+printCards(dealer_slot,dealer);
+printCards(player_slot,player);
+
+
+</script>
+</body>
+</html>

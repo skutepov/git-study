@@ -1,0 +1,82 @@
+<meta carset='utf-8'>
+<script type="text/javascript">
+	var arr = [];
+	var rounds = 0;
+	var n_zeros=0, n_blacks=0, n_reds=0;
+	var max_zeros=0, max_blacks=0, max_reds=0;
+	var i=0, x=0;
+	var black = -1, zero = 0, red = 1;
+	rounds=parseInt(prompt("Введите количество раундов: "));
+	for(i=1; i<=rounds; i++){
+		x=Math.round(Math.random()*36);
+		if (x!=zero) {
+			x=(x%2)*2-1 // так быстрее
+		/*	x=x%2;   так наглядней
+			if (x==0){
+				x=black;
+			}else {
+				x=red;
+			}*/
+		}
+		arr.push(x);
+
+	}
+
+	var start_t = new Date(); 
+	for (i=0; i<arr.length;i++){
+		if (arr[i] == red) {
+			n_reds = 0;
+			while (i<arr.length && arr[i] == 1){
+				i++;
+				n_reds++;
+			}
+			if (n_reds > max_reds) max_reds = n_reds;
+		}
+	}
+	var end_t = new Date();
+
+	alert("1 максимальная длинна красной последовательности: " + max_reds + " Скорость = " + ( end_t.getTime() - start_t.getTime()) + "мс" );
+	
+
+	n_zeros=0; n_blacks=0; n_reds=0;
+	max_zeros=0; max_blacks=0; max_reds=0;
+
+	
+//	alert("Длинна массива: " + arr.length + ". Элементы массива: " + arr);
+	start_t = new Date(); 
+	for(i=0;i<arr.length; i++){  
+		if (arr[i]==red){
+			n_reds++; 
+			if ( (i+1 == arr.length) || (arr[i]!=arr[i+1]) ) { 
+				if (n_reds>max_reds) max_reds=n_reds; 
+				n_reds=0; 
+			}
+		} 
+	}
+	end_t = new Date();
+	alert(" 2 максимальная длинна красной последовательности: " + max_reds + " Скорость = " + ( end_t.getTime() - start_t.getTime()) + "мс" );
+	
+	n_zeros=0; n_blacks=0; n_reds=0;
+	max_zeros=0; max_blacks=0; max_reds=0;
+
+	start_t = new Date();
+	arr.push(NaN);  
+	for(i=0;i<arr.length-1; i++){  
+		if (arr[i]==red){
+			n_reds++; 
+			if (arr[i]!=arr[i+1]) { 
+				if (n_reds>max_reds) max_reds=n_reds; 
+				n_reds=0; 
+			}
+		} 
+	}
+	arr.pop();
+	end_t = new Date();
+	alert("3 максимальная длинна красной последовательности: " + max_reds + " Скорость = " + ( end_t.getTime() - start_t.getTime()) + "мс" );
+ 
+	//alert("максимальная длинна красной последовательности: " + max_reds);
+	//alert("максимальная длинна черной последовательности: " + max_blacks);
+	//alert("максимальная длинна последовательности нулей: " + max_zeros);
+	
+</script>
+
