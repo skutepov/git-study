@@ -1,0 +1,68 @@
+Резюме:
+
+http://habrahabr.ru/post/187496/
+
+По блок-схемам:
+
+https://www.linux.org.ru/forum/general/10357036
+
+http://www.texample.net/tikz/examples/quantum-circuit/
+
+Шаблон диссертации:
+
+https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template - там же примеры листингов программ
+
+По теме листингов программ можно ещё почитать документацию к соответствующим пакетам: http://ctan.org/topic/listing
+
+Шаблон конвертов:
+
+https://github.com/nvoronchev/russian-post-C5-addr
+
+Шаблон по ГОСТ 7.32:
+
+https://github.com/latex-g7-32/latex-g7-32
+
+Прочее:
+
+http://rainnic.altervista.org/content/two-ideas-infographic-cv-using-latex-and-tikz
+
+http://www.overleaf.com/articles/latex-more-than-just-academic-papers-and-theses/cyfvvyfrpmyn#.VpPt_h5hUlh - во второй половине презентации разные интересные примеры
+
+Вот ещё шаблоны разные:
+
+https://github.com/cmichi/latex-template-collection
+
+Если не испугаетесь автоматизации, то http://mrzool.cc/tex-boilerplates/
+
+https://github.com/EvgeniiBaldin/ctex-ru - исходник книги по ТеХу от Евгения Балдина
+
+https://github.com/xHellerx/Math-tutorial - попытка писать учебник математики, на русском
+
+На https://tex.stackexchange.com/, который, вроде бы, был среди рекомендуемых курсом ссылок, можно найти много интересных примеров.
+
+http://tex.stackexchange.com/questions/112343/beautiful-table-samples - всякие табличные или близкие к тому данные/примеры
+
+http://tex.stackexchange.com/questions/39149/how-can-we-draw-a-christmas-tree-with-decorations-using-tikz - рисование ёлочек новогодних
+
+https://tex.stackexchange.com/questions/17579/how-can-i-design-a-book-cover - дизайн обложек книг
+
+http://tex.stackexchange.com/q/85904/79756 - ещё обложки и титульники
+
+http://tex.stackexchange.com/q/281415/79756 - примеры приглашений
+
+http://tex.stackexchange.com/q/1319/79756 - масса разных примеров применения ЛаТеХа, некоторые с исходным кодом или ссылками на него
+
+http://tex.stackexchange.com/q/134638/79756 - и ещё подборка примеров
+
+https://tex.stackexchange.com/questions/230526/list-of-books-written-in-latex-with-the-source-available - некоторые книги, написанные на ЛаТеХе с исходным кодом
+
+http://tex.stackexchange.com/q/104248/79756 - реализация странных вещей на ЛаТеХе
+
+http://tex.stackexchange.com/a/1621/79756 - список полезных ресурсов
+
+Встретил еще шаблон https://www.overleaf.com/4036854vqqrbp#/11783317/
+
+( http://academia.stackexchange.com/questions/61277/color-cv-vs-black-and-white-cv )
+
+
+

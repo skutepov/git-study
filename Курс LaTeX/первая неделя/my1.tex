@@ -1,0 +1,199 @@
+% Этот шаблон документа разработан в 2014 году
+% Данилом Фёдоровых (danil@fedorovykh.ru) 
+% для использования в курсе 
+% <<Документы и презентации в LaTeX>>, записанном НИУ ВШЭ
+% для Coursera.org: http://coursera.org/course/latex .
+% Исходная версия шаблона --- 
+% https://www.writelatex.com/coursera/latex/1.2
+
+\documentclass[a4paper,12pt,leqno]{article} % добавить leqno в [] для нумерации слева
+
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+%%\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+\usepackage{showkeys} 
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%%% Заголовок
+\author{\LaTeX{} в Вышке}
+\title{1.2 Математика в \LaTeX}
+\date{\today}
+
+\begin{document} % конец преамбулы, начало документа
+
+\maketitle
+
+первый      абзац 
+
+
+$2+2=4$
+
+
+2+2=4
+
+второй абзац
+
+выключная формула: \[ 2+2=4 \] продолжаю текст
+
+2,4
+$2,4$ $2, 4$
+ sdlvh lsd lgsl glks rwe er werh erh glsd glhdlskg h $1+2+3\hm{+}4+5+6+7$
+ 
+\begin{equation}\label{eq:mrrc}
+MR=MC
+\end{equation}
+
+еще текст
+\eqref{eq:mrrc} на стр. \pageref{eq:mrrc} - условия максимизации прибыли 
+
+\section{Нюансы работы с формулами}
+\subsection{Дроби} 
+много текста с вер дляываш фылдтвмш фы вмл фыаьфыв афывлщ мдофы м щфывщмщыофв
+ыдлварлдфырвадлрфыд софыв оыо фыолдв мдо фдв
+текст $\dfrac{a+b+c}{d+c*r}+1$ текст фдыолвиадиыил ыфо мфыл 
+фыодви дофыивод ыфд вдфцотдф дофы вод 
+
+\[\frac{1+\dfrac{4}{2}}{6}=0.5\]
+
+\subsection{Скобки}
+
+\[(2+3)*5=25\]
+\[(2+3)\times5=25\]
+\[(2+\frac{9}{3})\times5=25\]
+\[\left(2+\frac{9}{3}\right)\times5=25\]
+
+
+\subsection{Стандартные функции}
+$\sin x =5$
+$\ln x =5$
+\[\sgn x =1 \]
+
+\subsection{Символы}
+\[2\times2\ne5\]
+\[ A \cap B, A \cup B \]
+
+\subsection{Диакритические знаки}
+\[\bar x = 5\]
+\[\tilde x=5\]
+\[\overline{x+r+v+b+a}=5\]
+\[\widetilde{x+r+v+b+a}=5\]
+
+\subsection{Буквы других алфавитов}
+\[\tg \alpha = 1 \]
+\[\tg A = 1 \]
+\[\tg \Phi = 1 \]
+\[\epsilon, \phi\]
+\[\varepsilon, \varphi\]
+
+\section{формулы в несколько строк}
+\[2\times2=4\]
+\[3\times3=9\]
+\subsection{Очень длинные формулы}
+\[
+1+2+3+4+5+6+7+\dots+50+51+52+53+54+56+57+\dots+96+97+98+99+100=5050
+\]
+\begin{multline}
+1+2+3+4+5+6+7+\dots+ \\ +50+51+52+53+54+56+57+\dots +\\ +96+97+98+99+100=5050\tag{S}\label{eq:sum}
+\end{multline}
+
+\subsection{Несколько формул}
+
+\begin{align}
+2\times 2=4\\
+3\times 3=9\\
+10\times 65646 = 656460
+\end{align}
+
+\begin{align*}
+2\times 2&=4\\
+3\times 3&=9\\
+10\times 65646 &= 656460
+\end{align*}
+
+\begin{align*}
+2\times 2&=4 & 6\times 8 &=48\\
+3\times 3&=9 & A+C&=D\\
+10\times 65646 &= 656460 & \frac{3}{2}&=1,5
+\end{align*}
+
+\begin{align*}
+2\times 2&=4 & 6\times 8 &=48\\
+3\times 3&=9 & A+C&=D\\
+10\times 65646 &= 656460 & 3/2&=1,5
+\end{align*}
+
+\begin{equation}
+\begin{aligned}
+2\times 2&=4 & 6\times 8 &=48\\
+3\times 3&=9 & A+C&=D\\
+10\times 65646 &= 656460 & 3/2&=1,5	
+\end{aligned}
+\end{equation}
+
+\subsection{Система уравнений}
+
+\[
+	\left\{
+		\begin{aligned}
+			2\times x&=4 \\
+			3\times y&=9 \\
+			10\times z &= 656460 	
+		\end{aligned}
+	\right.
+\]
+\[
+	|x| = \begin{cases}
+	x, &\text{если } x \ge 0 \\
+	-x, &\text{если } x < 0
+	\end{cases}
+\]
+
+\subsection{Матрицы}
+
+\[
+	\begin{pmatrix}
+	a_{11} & a_{12} & a_{13} \\
+	a_{21} & a_{22} & a_{23}
+	\end{pmatrix}
+\]
+
+
+\[
+\begin{vmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23}
+\end{vmatrix}
+\]
+
+
+\[
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23}
+\end{bmatrix}
+\]
+
+В уравнении \eqref{eq:sum} на странице \pageref{eq:sum} много слагаемых
+
+\end{document} % конец документа
